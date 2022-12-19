@@ -1,0 +1,104 @@
+<div class="multistep_wrapper_outer {% if module.next_page.link.url.href and module.previous_page.link.url.href %}max{% else %}narrow{% endif %} {% if not module.next_page.link.url.href %}t-right{% endif %}{% if not module.previous_page.link.url.href %}t-left{% endif %}">  
+  {% if module.banner_background_image.src %}
+  {% set sizeAttrs = 'width="{{ module.banner_background_image.width }}" height="{{ module.banner_background_image.height }}"' %}
+  {% if module.banner_background_image.size_type == 'auto' %}
+  {% set sizeAttrs = 'width="{{ module.banner_background_image.width }}" height="{{ module.banner_background_image.height }}" style="max-width: 100%; height: auto;"' %}
+  {% elif module.banner_background_image.size_type == 'auto_custom_max' %}
+  {% set sizeAttrs = 'width="{{ module.banner_background_image.max_width }}" height="{{ module.banner_background_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+  {% endif %}
+  {% set loadingAttr = module.banner_background_image.loading != 'disabled' ? 'loading="{{ module.banner_background_image.loading }}"' : '' %}
+  <img class="background-image" src="{{ module.banner_background_image.src }}" alt="{{ module.banner_background_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+  {% endif %}
+  <div class="multistep_wrapper">
+    <div class="inner">
+      <div class="row-1">
+        <h5>{{ module.super_text }}</h5>
+        <h1>{{ module.title }}</h1>
+        <p>{{ module.sub_title }}</p>
+      </div>
+      <div class="progress" current="0" total="0">
+        <div class="progress-active" style="width:0"></div>
+      </div>
+      <div class="row-2" id="stepForm">
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          let portalID = "{{ hub_id }}";
+          let formID = "{{ module.form_field.form_id }}";
+          let emilID = "{{ request.query_dict.email }}"; 
+          
+          console.log(emilID)
+          hbspt.forms.create({
+            region: "na1",
+            portalId: portalID,
+            formId: formID,
+            inlineMessage:`<div class="message_inline">{{ module.form_field.message }}</div>`,   
+            onFormReady: function($form) {
+//               $($form[0]).css('visibility', 'hidden')
+              $('input[name="email"]').val(emilID).change(); 
+              $form.find("select").each(function() {
+                $(this).hide();
+                var x = $(this).attr("name");
+                var z = $(this).after("<div class='select' data-id="+x+" ></div>");
+                $(this).find("option").each(function() {
+                  var a = $(this).attr("value");
+                  var b = $(this).text();
+                  if(a != ""){
+                    $('.select[data-id="'+x+'"]').append("<div class='selectValue' data-id="+x+" data-value="+a+">"+b+"</div>");
+                  }
+                });
+              });
+              $(".selectValue").click(function(){
+                $(this).siblings().removeClass('selected')
+                $(this).addClass('selected')
+                var c = $(this).attr("data-id");
+                var d = $(this).attr("data-value");
+                $form.find('select[name="'+c+'"]').val(d).change();
+              });
+
+              $('#stepForm form > div').each(function(){
+                if($(this).children().hasClass('hs-form-field')){
+                  $(this).addClass('parent-wrapper')
+                }
+              })
+              
+              let parentWrapper = $('#stepForm form > .parent-wrapper')
+              let len = parentWrapper.length
+              $(parentWrapper).each(function(i) {
+                i = i + 1;
+                var j = i * 2;
+                $(this).nextUntil('#stepForm  form > .parent-wrapper').andSelf().wrapAll('<div class="steps tab" id="step'+ i +'" data-length="'+ (i+1) +'"></div>')
+              });
+              $('#step1').show();
+              let Steps = $('#stepForm form .steps')
+              $('.progress').attr('total', Steps.length)
+              $('#stepForm form .steps').each(function(i) {
+                i = i + 1;
+                let prev = "";let next = "";
+                if(i > 1){
+                  prev = '<a href="#step'+ (i-1) +'" class="button prev-step"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M8.5 0L9.91 1.41L4.33 7H16.5V9H4.33L9.91 14.59L8.5 16L0.5 8L8.5 0Z" /></svg><span>Back</span></a>'
+                }
+                if(i <= Steps.length -2){
+                  next = '<a href="#step'+ (i+1)  +'" class="button next-step"><span>Next</span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"><path d="M12.5 4L11.09 5.41L16.67 11H4.5V13H16.67L11.09 18.59L12.5 20L20.5 12L12.5 4Z" /></svg></a>'
+                }
+                if(i <= Steps.length - 1){
+                  $(this).append('<div class="steps-buttons">'+ prev +' '+ next+'</div>')
+                }
+              })
+
+              let totalSteps = $('.progress').attr('total');
+              let curStep = $('#step1').attr('data-length');
+
+              let pwid = (100 / parseInt(totalSteps)) * parseInt(curStep);
+              $('.progress').children().css('width', pwid+"%" )
+              setTimeout(function(){
+                $($form[0]).css('visibility', 'visible')
+              },500)
+            }
+          });
+        </script>
+
+      </div>
+    </div> 
+  </div>
+</div>
+

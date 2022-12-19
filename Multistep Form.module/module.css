@@ -1,0 +1,371 @@
+@font-face {
+  font-family: 'Brandon Grotesque';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://9220625.fs1.hubspotusercontent-na1.net/hubfs/9220625/brandon-grotesque-regular-webfont.woff) format('woff2');
+}
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+body{
+  margin:0;
+  padding:0;
+  font-family: 'Brandon Grotesque';
+}
+.multistep_wrapper_outer {
+  padding-top: 110px;
+  position: relative;
+}
+.multistep_wrapper_outer .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: top;
+}
+.multistep_wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: 50px 0;
+}
+.multistep_wrapper .row-1 {
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto;
+}
+.multistep_wrapper .row-1 h5 {
+  margin: 0;
+  text-transform: uppercase;
+  color: #00205B;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.multistep_wrapper .row-1 h1 {
+  font-size: 48px;
+  line-height: 56px;
+  margin: 0 0 16px;
+  color: #00205B;
+}
+
+
+.multistep_wrapper .hs-richtext *:not(hr) {
+  max-width: 80%;
+  margin: 40px auto;
+}
+.multistep_wrapper .hs-richtext hr {
+  height: 0;
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid #DFDEE3;
+}
+.multistep_wrapper .hs-richtext hr:last-child {
+  margin-bottom: 40px;
+}
+.progress {
+  background: #F1F2F2;
+  height: 8px;
+  margin: 40px 0;
+  position: relative;
+}
+.progress-active {
+  background: #4EA6C1;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  height: 8px;
+  transition: all .3s ease;
+}
+.multistep_wrapper .steps-buttons a[href=""] {
+  background: #fff;
+  color: #00205B;
+  font-weight: 600;
+}
+.steps-buttons .next-step svg {
+    margin-left: 8px;
+}
+.steps-buttons .prev-step svg {
+    margin-right: 8px;
+}
+/* ====================== form style ================================== */
+div#stepForm form {
+    visibility: hidden;
+}
+.multistep_wrapper .hs-input {
+  border: 1px solid #797890;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  min-height: 50px;
+}
+
+.multistep_wrapper .actions {
+  text-align: center;
+}
+.narrow .multistep_wrapper .actions {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+    position: relative;
+    width: auto;
+    display: inline-block;
+}
+.multistep_wrapper .hs_submit.hs-submit {
+    text-align: center;
+}
+.hbspt-form {
+  min-height: 100px;
+}
+.multistep_wrapper .hs-richtext h4 {
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+  color: #00205B;
+  margin:40px auto;
+}
+.multistep_wrapper .hs-form-field > div {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.multistep_wrapper .hs-form-field > label {
+  font-size: 18px;
+  font-weight: 390;
+  line-height: 26px;
+  color: #3D4543;
+  display: block;
+  max-width: 80%;
+  margin: 0 auto 16px;
+}
+.multistep_wrapper .hs-form-field {
+  margin: 0 0 40px;
+}
+.multistep_wrapper .hs-form-field.hs-fieldtype-select{
+  margin: 0 0 70px;
+}
+.multistep_wrapper .select {
+  display: flex;
+  justify-content: space-between;
+}
+.multistep_wrapper .select > div {
+  align-items: center;
+  background: #f1f2f2;
+  border-radius: 2px;
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  width: 48px;
+  color: #797890;
+  font-family: Brandon Grotesque;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  cursor:pointer;
+  position: relative;
+}
+.multistep_wrapper .select > div.selected {
+  background: #4EA6C1;
+  border-radius: 2px;
+  color: #fff;
+  font-weight: 500;
+}
+.selectValue:first-child:after,
+.selectValue[data-value="10"]:after{
+  content: "Not at all satisfied ";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  min-width: 150px;
+  left: 0;
+  color:#3D4543
+}
+.selectValue[data-value="10"]:after {
+  content: "Very satisfied";
+  left: auto;
+  right: 0;
+  text-align: right;
+}
+.multistep_wrapper .actions input.hs-button.primary,
+.steps-buttons .button{
+  border: 1px solid #00205B;
+  border-radius: 999px;
+  padding: 20px 32px;
+  background: transparent;
+  font-family: Brandon Grotesque;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.025em;
+  cursor: pointer;
+}
+.multistep_wrapper .steps-buttons {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+}
+.multistep_wrapper .hs_error_rollup {
+    display: none;
+}
+.multistep_wrapper .steps-buttons .button {
+  border: 1px solid transparent;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  background: #EA6852;
+  border-radius: 64px;
+  color: #fff;
+  text-decoration: none;
+}
+.steps-buttons .button.next-step {
+    margin-left: auto;
+}
+.multistep_wrapper .steps-buttons .button svg {fill: currentColor;}
+.multistep_wrapper .steps-buttons .prev svg,
+.multistep_wrapper .steps-buttons .next span{
+  margin-right: 12px;
+}
+.multistep_wrapper textarea.hs-input {
+  border: 1px solid #797890;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  min-height: 100px;
+}
+.multistep_wrapper ul.inputs-list {
+  list-style: none;
+  margin: 00;
+  padding: 0;
+}
+.multistep_wrapper .inputs-list .hs-form-checkbox input,
+.multistep_wrapper .inputs-list .hs-form-radio input{
+  width: 24px;
+  height: 24px;
+  margin: 0 8px 16px 0px;
+  appearance: none;
+  border: 1px solid #797890;
+  border-radius: 2px;
+  min-height: 0;
+}
+.multistep_wrapper .inputs-list .hs-form-radio input{
+  border-radius: 50%;
+}
+.multistep_wrapper .inputs-list label {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #3D4543;
+}
+.multistep_wrapper .inputs-list span {
+  margin-bottom: 16px;
+  display: block;
+}
+.multistep_wrapper .inputs-list li:last-child input,
+.multistep_wrapper .inputs-list li:last-child span {
+  margin-bottom:0;
+}
+
+.multistep_wrapper .inputs-list .hs-form-checkbox input:checked {
+  background: #4EA6C1 url('https://9220625.fs1.hubspotusercontent-na1.net/hubfs/9220625/check.svg');
+  border-radius: 2px;
+  border-color: #4EA6C1;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.multistep_wrapper .inputs-list .hs-form-radio input:checked {
+  background: #4EA6C1 url('https://9220625.fs1.hubspotusercontent-na1.net/hubfs/9220625/circle.svg');
+  border-color: #4EA6C1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 10px;
+}
+.multistep_wrapper .inputs-list input:checked + span{
+  font-weight:600
+}
+ul.no-list.hs-error-msgs {
+  max-width: 80%;
+  margin: 0 auto;
+}
+ul.no-list.hs-error-msgs label {
+  color: red;
+}
+.submitted-message.hs-main-font-element {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+.multistep_wrapper .hs-form-field .hs-error-msgs {
+  position: relative;
+  top: 40px;
+}
+#stepForm .steps:not(:last-child) {
+  display: none;
+}
+#stepForm .steps:last-child {
+    display: block !important;
+}
+.multistep_wrapper .hs-richtext div:last-child,
+.multistep_wrapper .hs-richtext p:last-child{
+    margin: 0;
+}
+.select + .custom-error {
+    top: 40px;
+    position: relative;
+}
+.custom-error {
+    color: red;
+}
+@media(max-width:767px){
+  .multistep_wrapper{
+    padding:30px 0px;
+  }
+  .multistep_wrapper .select>div {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+  .multistep_wrapper .steps-buttons .hidden-phone {
+    display: none;
+  }
+  .multistep_wrapper .steps-buttons .next span,
+  .multistep_wrapper .steps-buttons .prev svg {
+    margin: 0;
+  }
+  .multistep_wrapper .actions input.hs-button.primary{
+    padding: 15px;
+    font-size: 18px;
+  }
+  .multistep_wrapper .steps-buttons {
+    margin-top: -54px;
+  }
+  .multistep_wrapper .steps-buttons .button {
+    padding: 10px;
+  }
+  .multistep_wrapper .hs-richtext h4,
+  .multistep_wrapper .hs-form-field > label,
+  .multistep_wrapper .steps-buttons,
+  .multistep_wrapper .hs-form-field > div{
+    max-width: 95%;
+  }
+}

@@ -1,0 +1,177 @@
+[ {
+  "id" : "2531d5a4-cd37-56b8-570b-40bf8b224fd3",
+  "name" : "banner_background_image",
+  "display_width" : null,
+  "label" : "Banner background image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://9220625.fs1.hubspotusercontent-na1.net/hubfs/9220625/Featured%20Content%20-%20Section.jpg",
+    "alt" : "Featured Content - Section",
+    "loading" : "lazy",
+    "width" : 1440,
+    "height" : 421,
+    "max_width" : 1440,
+    "max_height" : 421
+  }
+}, {
+  "id" : "ca8b5a88-561d-c659-7709-4f012db33d54",
+  "name" : "super_text",
+  "display_width" : null,
+  "label" : "Super Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Customer Satisfaction Survey"
+}, {
+  "id" : "e663c785-ecc7-bf35-246f-d49d845fc806",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Thank You for Your Feedback"
+}, {
+  "id" : "c02b23c5-6e46-2916-86dd-7e30b190967b",
+  "name" : "sub_title",
+  "display_width" : null,
+  "label" : "Sub title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "At euismod dui aliquet malesuada lectus semper. Molestie pulvinar lacus nascetur et. Adipiscing bibendum neque tincidunt dictumst faucibus urna."
+}, {
+  "id" : "07fe420c-ae1e-e84b-b153-cc9e789b3386",
+  "name" : "form_field",
+  "display_width" : null,
+  "label" : "Form",
+  "required" : false,
+  "locked" : false,
+  "type" : "form",
+  "default" : {
+    "form_id" : "3a37f7f7-a2e8-4f35-940f-149a5b261098",
+    "response_type" : "inline",
+    "message" : "Thanks for submitting the form.\n<div class=\"steps-buttons\"><a href=\"//azamara-9220625.hs-sites.com/azamara-nps-survey-step-2\" class=\"step button next\"> <span class=\"hidden-phone\">Continue</span> <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"25\" height=\"24\" viewBox=\"0 0 25 24\" fill=\"none\"> <path d=\"M12.5 4L11.09 5.41L16.67 11H4.5V13H16.67L11.09 18.59L12.5 20L20.5 12L12.5 4Z\"></path> </svg> </a></div>",
+    "gotowebinar_webinar_key" : null,
+    "form_type" : "HUBSPOT"
+  }
+}, {
+  "id" : "b099691c-ed1e-da1d-92e7-ce302680ce06",
+  "name" : "previous_page",
+  "display_width" : null,
+  "label" : "Previous Page",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "b71690b6-76c7-8e10-c2e7-b0c2e1c6e8ad",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "3155027a-38f2-158f-b2c6-7724237e8e2d",
+  "name" : "next_page",
+  "display_width" : null,
+  "label" : "Next Page",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "50764cd8-e0f8-4bad-ccc7-d5e2d67df2de",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "6d299749-4c2b-7dc5-5ae3-9277e0ca5257",
+  "name" : "total_step",
+  "display_width" : null,
+  "label" : "Total From Step",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "step" : 1,
+  "type" : "number",
+  "default" : 19
+}, {
+  "id" : "c3f7266d-ebf3-1305-c346-e383b1819dbe",
+  "name" : "current_page_number",
+  "display_width" : null,
+  "label" : "Current Page Number ",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "step" : 1,
+  "type" : "number",
+  "default" : 1
+} ]
